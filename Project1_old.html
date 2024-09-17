@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1: No Cure For Madness - Portfolio</title>
+    <style>
+        div {
+            opacity: 0;  /* Initially invisible */
+            animation: fadeIn 1s ease-in forwards;  /* Apply the fadeIn animation */
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;  /* End state is fully visible */
+            }
+        }
+
+        button, .button, .back-button, .visit-button {
+            background-color: #c0c0c0;
+            border: 2px solid #dfdfdf;
+            border-right-color: #404040;
+            border-bottom-color: #404040;
+            padding: 2px 6px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+        }
+
+        button:hover, .button:hover, .back-button:hover, .visit-button:hover {
+            background-color: #000080;
+            color: white;
+            border: 2px solid #ffffff;
+            box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
+        }
+        body, html {
+            font-family: 'MS Sans Serif', Arial, sans-serif;
+            background-color: #008080;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .window {
+            width: 95vw;
+            height: 95vh;
+            margin: 2.5vh auto;
+            background-color: #c0c0c0;
+            border: 2px solid #dfdfdf;
+            border-right-color: #404040;
+            border-bottom-color: #404040;
+            box-shadow: inset 1px 1px #dfdfdf, 1px 0 #000, 0 1px #000, 1px 1px #000;
+            display: flex;
+            flex-direction: column;
+        }
+        .title-bar {
+            background: linear-gradient(90deg, #000080, #1084d0);
+            padding: 3px 2px 3px 3px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .title-bar-text {
+            font-weight: bold;
+            color: white;
+            letter-spacing: 0.5px;
+            margin-left: 3px;
+        }
+        .title-bar-controls {
+            display: flex;
+        }
+        .title-bar-controls button {
+            width: 16px;
+            height: 14px;
+            border: 1px solid white;
+            background-color: #c0c0c0;
+            margin-left: 2px;
+            font-size: 9px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+        }
+        .window-body {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 8px;
+            overflow: hidden;
+        }
+        .content {
+            flex-grow: 1;
+            background-color: #ffffff;
+            border: inset 2px #808080;
+            padding: 10px;
+            margin-top: 10px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .back-button {
+            background-color: #c0c0c0;
+            border: 2px outset #dfdfdf;
+            padding: 2px 6px;
+            font-size: 12px;
+            cursor: pointer;
+            align-self: flex-start;
+            margin-bottom: 10px;
+        }
+        .back-button:active {
+            border-style: inset;
+        }
+        .project-title {
+            color: #000080;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .project-content {
+            display: flex;
+            gap: 20px;
+        }
+        .text-section {
+            flex: 1;
+            background-color: #f0f0f0;
+            border: 1px solid #808080;
+            padding: 10px;
+            height: 70vh;
+            overflow-y: auto;
+        }
+        .text-section h2 {
+            color: #000080;
+            border-bottom: 1px solid #808080;
+            padding-bottom: 5px;
+        }
+        .gallery-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .main-image {
+            width: 100%;
+            height: 400px;
+            object-fit: fill;
+            border: 1px solid #808080;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            height: calc(70vh - 220px);
+            overflow-y: auto;
+        }
+        .image-grid img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border: 1px solid #808080;
+            cursor: pointer;
+        }
+        .status-bar {
+            background-color: #c0c0c0;
+            border-top: 1px solid #808080;
+            padding: 2px 5px;
+            font-size: 12px;
+        }
+        .visit-button {
+            background-color: #c0c0c0;
+            border: 2px outset #dfdfdf;
+            padding: 5px 10px;
+            font-size: 14px;
+            cursor: pointer;
+            align-self: center;
+            margin-top: 10px;
+        }
+        .visit-button:active {
+            border-style: inset;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+        }
+        .modal-content {
+            background-color: #c0c0c0;
+            margin: 10% auto;
+            padding: 20px;
+            border: 2px solid #dfdfdf;
+            border-right-color: #404040;
+            border-bottom-color: #404040;
+            width: 80%;
+            max-width: 700px;
+        }
+        .modal-image {
+            width: 100%;
+            max-height: 70vh;
+            object-fit: contain;
+        }
+        .close {
+            color: #000080;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="window">
+        <div class="title-bar">
+            <div class="title-bar-text">Project 1 - Portfolio</div>
+            <div class="title-bar-controls">
+                <button>_</button>
+                <button>□</button>
+                <button>X</button>
+            </div>
+        </div>
+        <div class="window-body">
+            <div class="content">
+                <button class="back-button" onclick="history.back()">← Back to Portfolio</button>
+                <h1 class="project-title">Project 1: No Cure For Madness</h1>
+                <div class="project-content">
+                    <div class="text-section">
+                        <h2>About This Project</h2>
+                        <h3>What Happened?</h3>
+                        <p>"In the past weeks, I have been developing my 2D RPG game, No Cure For Madness. I researched other games, design techniques, and learned the basics of Unity. This includes coding in C# within Unity, working with assets, prefabs, components, and game objects. Initially, I experimented with a top-down 2D game but later transitioned to a side-view game for simplicity."</p>
+                        <p>"I implemented character mechanics, utilized Unity's tile features, and developed my own custom tiles. The game evolved through prototyping and iteration, focusing on gameplay mechanics and visual aesthetics."</p>
+                        <h3>Feelings</h3>
+                        <p>"I feel that, similar to the first game that I created, the game lacks on code as I dedicated more time to trying to comprehend the code and focus on the visual aspects of the game such as design and assets. This means that my game is lacking a lot of content and I have had to rush a lot of features. I feel confident that I could do most things but that I spend way too long doing simple things."</p>
+                        <h3>Evaluation</h3>
+                        <p>"I think the best part of my game is maybe the implementation of the pixel camera and being able to easily add 3D models that render in 2D pixel. This also works with the particle system which makes the level design very simple to make look good. This combined with the tile set that I used meant that I was very easily able to make levels that both look good and are large in scale. The problem is that the levels are unpopulated as I did not implement enemies or hazards."</p>
+                        <h3>Analysis</h3>
+                        <p>"I think overall the issues that I have faced have all stemmed from my time management and not getting round to fully fleshing out my game. From the beginning I didn't really have a solid idea of story or character but instead decided to create this while starting the game. This meant I kept changing things around and creating new stuff and removing things I didn't think I would need. This wasn't very stable and led to me not committing to a single game project. I created three Unity projects and changed things around multiple times and I think if I had decided on my plan in the beginning then this could have been avoided."</p>
+                        <h3>Conclusion</h3>
+                        <p>"In conclusion, I think my game is very incomplete but what there currently is in the game is moderately polished. The player controller and animations are probably the main highlight and took the most amount of time as I had to figure a lot of it out myself, but apart from that I think I should have implemented more features instead of focusing on the few as it sacrificed the most important game features like shooting and combat, as well as other enemies."</p>
+                    </div>
+                    <div class="gallery-section">
+                        <img src="Project1/GameScreenshot.png" alt="No Cure Cover Art" class="main-image">
+                        <div class="image-grid">
+                            <img src="Project1/NoCureCoverArt.png" alt="Game Screenshot" onclick="openModal(this.src)">
+                            <img src="Project1/Animation_kick.gif" alt="Kick Animation" onclick="openModal(this.src)">
+                            <img src="Project1/animation_idle.gif" alt="Idle Animation" onclick="openModal(this.src)">
+                            <img src="Project1/ColtDragoon.gif" alt="Colt Dragoon" onclick="openModal(this.src)">
+                            <img src="Project1/testrender.png" alt="Test Render" onclick="openModal(this.src)">
+                            <img src="Project1/concept_art.jpg" alt="Concept Art 1" onclick="openModal(this.src)">
+                            <img src="Project1/concept_art2.jpg" alt="Concept Art 2" onclick="openModal(this.src)">
+                            <img src="Project1/concept_art3.jpg" alt="Concept Art 3" onclick="openModal(this.src)">
+                            <img src="Project1/concept_art4.jpg" alt="Concept Art 4" onclick="openModal(this.src)">
+                        </div>
+                    </div>
+                </div>
+                <button class="visit-button" onclick="alert('Redirecting to full game page...')">Visit Full Game Page</button>
+            </div>
+            <div class="status-bar">
+                Ready
+            </div>
+        </div>
+    </div>
+
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" class="modal-image" src="" alt="Modal Image">
+        </div>
+    </div>
+
+    <script>
+        function openModal(imageSrc) {
+            var modal = document.getElementById("imageModal");
+            var modalImg = document.getElementById("modalImage");
+            modal.style.display = "block";
+            modalImg.src = imageSrc;
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("imageModal");
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            var modal = document.getElementById("imageModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

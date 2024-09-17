@@ -1,0 +1,151 @@
+
+.content {
+    background-image: url('stars1.png'); /* Path to your custom image */
+    background-repeat: repeat; /* Ensures the image tiles */
+    background-size: 5000; /* Adjust size if needed, auto maintains original size */
+    background-position: top left; /* Position of the image (default is top left) */
+    background-attachment: fixed; /* Optional: makes the background fixed */
+    flex-grow: 1;
+    background-color: #ffff99;
+    border: inset 2px #808080;
+    padding: 10px;
+    margin-top: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+.window-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    overflow: hidden;
+}
+.status-bar {
+    background-color: #c0c0c0;
+    border-top: 1px solid #808080;
+    padding: 2px 5px;
+    font-size: 12px;
+        }
+button, .button, .back-button, .visit-button {
+    background-color: #c0c0c0;
+    border: 2px solid #dfdfdf;
+    border-right-color: #404040;
+    border-bottom-color: #404040;
+    padding: 2px 6px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+button:hover, .button:hover, .back-button:hover, .visit-button:hover {
+    background-color: #000080;
+    color: white;
+    border: 2px solid #ffffff;
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
+}
+div {
+    opacity: 0; 
+    animation: fadeIn 1s ease-in forwards;  
+}
+@keyframes fadeIn {
+    to {
+        opacity: 1; 
+    }
+}
+h1 {
+    border-right: 2px solid; 
+    white-space: nowrap;  
+    width: 0;  
+    animation: typewriter 4s steps(30, end) forwards, blink 0.75s step-end infinite;
+}
+@keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }  
+}
+
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+}
+body, html {
+    cursor: url("glove-cursor.png"), auto; /* Cursor */
+    font-family: 'Comic Sans MS', 'MS Sans Serif', Arial, sans-serif;
+    background-color: #008080;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+.window {
+    width: 95vw;
+    height: 95vh;
+    margin: 2.5vh auto;
+    background-color: #c0c0c0;
+    border: 2px solid #dfdfdf;
+    border-right-color: #404040;
+    border-bottom-color: #404040;
+    box-shadow: inset 1px 1px #dfdfdf, 1px 0 #000, 0 1px #000, 1px 1px #000;
+    display: flex;
+    flex-direction: column;
+}
+.title-bar {
+    background: linear-gradient(90deg, #000080, #1084d0);
+    padding: 3px 2px 3px 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.title-bar-text {
+    font-weight: bold;
+    color: white;
+    letter-spacing: 0.5px;
+    margin-left: 3px;
+}
+.menu-bar {
+    background-color: #c0c0c0;
+    padding: 1px;
+    border-bottom: 1px solid #808080;
+}
+.menu-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.menu-bar li {
+    padding: 2px 5px;
+    margin-right: 5px;
+    cursor: pointer;
+    color: #000080;  
+    background-color: #c0c0c0;  
+    border: 1px solid transparent; 
+}
+.menu-bar li:hover {
+    background-color: #000080;  
+    color: white; 
+    border: 1px solid #ffffff;  
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;  /* 3D effect */
+}
+.title-bar-controls {
+    display: flex;
+}
+.title-bar-controls button {
+    width: 16px;
+    height: 14px;
+    border: 1px solid white;
+    background-color: #c0c0c0;
+    margin-left: 2px;
+    font-size: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+.window-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    overflow: hidden;
+}
