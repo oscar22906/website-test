@@ -76,13 +76,14 @@ h1, h2, h3 {
     font-size: 12px;
         }
 .button {
+    scale: 1.25;
     background-color: green;
     color: white;
     padding: 10px 20px;
     text-align: center;
     border: none;
     cursor: pointer;
-    text-decoration: none;
+    text-decoration: wavy;
 }
 .button:hover {
     background-color: darkgreen;
