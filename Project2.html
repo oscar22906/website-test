@@ -6,6 +6,29 @@
     <link rel="stylesheet" href="styles2.css">
     <title>Project 2: No Cure For Madness Again - Portfolio</title>
 </head>
+<style>
+    .background-image {
+        position: fixed;
+        width: 75px;
+        height: auto;
+        z-index: -1;
+        pointer-events: none; 
+    }
+
+    .background-image.top-right {
+        top: 340px;
+        right: 20px;
+    }
+
+    .background-image.bottom-left {
+        bottom: 50px;
+        left: 30px;
+    }
+    .highlight {
+        background-color: aqua;
+        color: blue;
+    }
+</style>
 <body id="body">
     <div class="window">
         <div class="title-bar">
@@ -28,76 +51,87 @@
         <div class="window-body">
             <div class="content">
                 <marquee>Thank you for your interest!! :D</marquee>
-                <div class="background-image">
-                    <img  class="background-image" src="" width="300">
+                <div class="background-image top-right">
+                    <img src="gif/new/prev.gif" >
                 </div>
                 <h1 class="project-title">Project 2: No Cure For Madness again</h1>
                 <img src="gif/western/bronco1.gif" height="75" width="600" style="display: block; margin: 0 auto;">
                 <img src="Project2/cooltext466385864039426.png" height="200" width="700" style="display: block; margin: 0 auto;">
                 <p></p>
+                <img src="gif/new/FiRELiNE.gif" height="100" width="900" style="display: block; margin: 0 auto;">
+                <p></p>
                 <div class="project-content">
                     <!-- Left GIF column -->
                     <div class="column">
-                        <img src="" height="150px">
-                        <img src="">
-                        <img src="">
-                        <img src="">
-                        <img src="">
+                        <img src="gif/western/cowgirl.gif" height="150px">
+                        <img src="gif/western/leo_cowboyinton.gif">
+                        <img src="gif/western/coltclr.gif">
+                        <img src="gif/western/arm.htm_txt_laars_2.gif">
+                        <img src="gif/western/cowboy_shooting_one_gun_md_clr.gif">
                     </div>
                     <div class="text-section">
                         <h2>O v e r v i e w</h2>
                         <p>No Cure For Madness was the name i decided to give to this short game set in a western environment. I used this idea for my first three games, the first, a console text game that was very primitive. The second, this game, a 2D walking simulator and the final game; a 3D isometric game. </p>
                         <h2>A b o u t _ T h i s _ P r o j e c t</h2>
-                        <img style="display:block; margin: 0 auto;" src="gif/western/anitumbleweed.gif" height="25">
-                        <h3>What Happened?</h3>
-                        <p>"In the past weeks, I have been developing my 2D RPG game, No Cure For Madness. I researched other games, design techniques, and learned the basics of Unity. This includes coding in C# within Unity, working with assets, prefabs, components, and game objects. Initially, I experimented with a top-down 2D game but later transitioned to a side-view game for simplicity."</p>
-                        <p>"I implemented character mechanics, utilized Unity's tile features, and developed my own custom tiles. The game evolved through prototyping and iteration, focusing on gameplay mechanics and visual aesthetics."</p>
-                        <h3>Feelings</h3>
-                        <p>"I feel that, similar to the first game that I created, the game lacks on code as I dedicated more time to trying to comprehend the code and focus on the visual aspects of the game such as design and assets. This means that my game is lacking a lot of content and I have had to rush a lot of features. I feel confident that I could do most things but that I spend way too long doing simple things."</p>
-                        <h3>Evaluation</h3>
-                        <p>"I think the best part of my game is maybe the implementation of the pixel camera and being able to easily add 3D models that render in 2D pixel. This also works with the particle system which makes the level design very simple to make look good. This combined with the tile set that I used meant that I was very easily able to make levels that both look good and are large in scale. The problem is that the levels are unpopulated as I did not implement enemies or hazards."</p>
-                        <h3>Analysis</h3>
-                        <p>"I think overall the issues that I have faced have all stemmed from my time management and not getting round to fully fleshing out my game. From the beginning I didn't really have a solid idea of story or character but instead decided to create this while starting the game. This meant I kept changing things around and creating new stuff and removing things I didn't think I would need. This wasn't very stable and led to me not committing to a single game project. I created three Unity projects and changed things around multiple times and I think if I had decided on my plan in the beginning then this could have been avoided."</p>
-                        <h3>Conclusion</h3>
-                        <p>"In conclusion, I think my game is very incomplete but what there currently is in the game is moderately polished. The player controller and animations are probably the main highlight and took the most amount of time as I had to figure a lot of it out myself, but apart from that I think I should have implemented more features instead of focusing on the few as it sacrificed the most important game features like shooting and combat, as well as other enemies."</p>
+                        <b>Development Time:</b> <b class="highlight">6 Weeks</b>
+                        <p>Due Date: <b class="highlight">16th Dec 2023</b></p>
+                        <p>Final score: <b class="highlight">95/100</b></p>
+                        <img style="display:block; margin: 0 auto;" src="gif/western/anitumbleweed.gif" height="50">
+                        <h3>Final Evaluation</h3>
+                        <p>"I think overall this game went better than the last because I spent more time on it. There was a rush to get it done in the end and it still lacks a lot of features that I would have wanted but I think it is better than the 2D game. In the end I spent more time creating the assets and the level than I would have liked and less time dedicated to coding and adding features to the game. I’m still getting better at scripting so I am not the best at things like coding the combat or AI but I tried my hardest to make it good in this game. My main focus was again on the art and design of the game but I am proud that I got some features working that I consider to be advanced."</p>
+                        <p>The thing I am most proud of is the animators for the two functioning characters. These have death animations and hit reactions as well as a couple attacks and different run/walk/combat animations. That being said the large tank unit does not function as intended and doesnt attack the player and I didnt not have time properly setup the ranged enemy so they are just placed static in the scene. I think my greatest struggle in these projects has been trying to meet my expectations. I have learnt that I need to limit my expectations as I am never able to get what I want out of the creation of the games. But if I sacrifice some of the aspects of the game I am able to get closer to my goal. For example, I wanted to implement generated levels but I had to make the level static instead to focus on combat and the enemies.</p>
+                        <p></p>
+                        <h3> On Isometric Aiming</h3>
+                        <p>One challenge that i faced at the beginning was getting the player to aim where the cursor is located. Not only this but whether the cursor should lock its position above the ground to allow for easier aiming. It was pretty hard finding isometric specific tutorials so I needed to create a aiming script that I could use with other scripts like shooting with weapons and such.</p>
+                        <p>I also decided that when the player aims, the players rotation will lock towards the cursor. This is to prevent the player from being able to aim behind themselves and this did not look good with my IK setup.</p>
                         <button class="back-button"onclick="history.back()">← Back to Portfolio</button>
-                        <button class="visit-button" onclick="redirectToPage()">Visit Full Game Page</button>
+                        <button class="visit-button" onclick="redirectToUnity()">Visit Full Game Page</button>
+                        <button class="visit-button" onclick="redirectToGit()">Visit Github Page</button>
                         <P></P>
-                        <img height="60" style="display:block; margin: 0 auto;" src="gif/western/usa1.gif">
+                        <img height="120" style="display:block; margin: 0 auto;" src="gif/western/cowboy_ani002.gif">
                         <P></P>
-                        <iframe src="https://drive.google.com/file/d/1cKUGY9hUOFs_5a-x6cRFZCQgQ6vfVQWH/preview"  style="display:block; margin: 0 auto;" width="640" height="360" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/1P7AYp8NXxDMAqOCpr3B55dLpagi4Pep7/preview" style="display:block; margin: 0 auto;" width="640" height="360" allow="autoplay"></iframe>
                         <p></p>
                         <img src="gallery.gif" style="display:block; margin: 0 auto;">
                         <div class="bottom-container">
                             <div class="gallery-section">
-                                <img src="Project1/NoCureCoverArt.png" alt="Really bad cover art that I rushed to make." onclick="openModal(this.src)">
-                                <img src="Project1/Animation_kick.gif" alt="Kicking Animation test" onclick="openModal(this.src)">
-                                <img src="Project1/animation_idle.gif" alt="Idle Animation" onclick="openModal(this.src)">
-                                <img src="Project1/ColtDragoon.gif" alt="Colt Dragoon gun model that I would later use" onclick="openModal(this.src)">
-                                <img src="Project1/testrender.png" alt="Test Render using Blender Line art" onclick="openModal(this.src)">
-                                <img src="Project1/concept_art.jpg" alt="Concept Art 1 credit instagram.com/xfannavt" onclick="openModal(this.src)">
-                                <img src="Project1/concept_art2.jpg" alt="Concept Art 2 credit instagram.com/xfannavt">
-                                <img src="Project1/concept_art3.jpg" alt="Concept Art 3 credit instagram.com/xfannavt">
-                                <img src="Project1/concept_art4.jpg" alt="Concept Art 4 credit instagram.com/xfannavt">
-                                <img src="Project1/guns.png" alt="Workshopping the visual style, used more in the 2nd game">
-                                <img src="Project1/workexample1.png" alt="How i textured the model">
-                                <img src="Project1/workexample2.png" alt="The dreaded poncho of complication">
+                                <img src="Project2/image108.png" alt="Game cover" onclick="openModal(this.src)">
+                                <img src="Project2/image99.jpg" alt="Game Splash screen" onclick="openModal(this.src)">
+                                <img src="Project2/image21.png" alt="Final versions of all three enemies" onclick="openModal(this.src)">
+                                <img src="Project2/image18.png" alt="Concept for the the medium sized enemy credit instagram.com/bulkga" onclick="openModal(this.src)">
+                                <img src="Project2/image95.png" alt="Saloon test in unity" onclick="openModal(this.src)">
+                                <img src="Project2/image100.png" alt="Saloon test in unity showing Navmesh settup" onclick="openModal(this.src)">
+                                <img src="Project2/image102.png" alt="Saloon test in unity" onclick="openModal(this.src)">
+                                <img src="Project2/image107.png" alt="Saloon test in unity showing spawning system" onclick="openModal(this.src)">
+                                <img src="Project2/image28.png" alt="Large enemy render" onclick="openModal(this.src)">
+                                <img src="Project2/image38.png" alt="Large enemy render" onclick="openModal(this.src)">
+                                <img src="Project2/image25.png" alt="Small enemy render" onclick="openModal(this.src)">
+                                <img src="Project2/image20.png" alt="Small enemy render" onclick="openModal(this.src)">
+                                <img src="Project2/image104.png" alt="Unity screenshot showing the AI system" onclick="openModal(this.src)">
+                                <img src="Project2/image60.png" alt="Medium enemy render" onclick="openModal(this.src)">
+                                <img src="Project2/image98.gif" alt="Pixel shader test" onclick="openModal(this.src)">
+                                <img src="Project2/image89.png" alt="Unity screenshot showing isometric aiming" onclick="openModal(this.src)">
+                                <img src="Project2/image35.png" alt="Winchester rifle model" onclick="openModal(this.src)">
+                                <img src="Project2/cosm_cutout_design1.png" alt="Enemy concept art credit instagram.com/xfannavt" onclick="openModal(this.src)">
+                                <img src="Project2/image19.png" alt="Enemy concept art credit instagram.com/xfannavt" onclick="openModal(this.src)">
+                                <img src="Project2/image24.png" alt="Enemy concept art credit instagram.com/xfannavt" onclick="openModal(this.src)">
                             </div>
                         </div>
                     </div>
                     <!-- Right GIF column -->
                     <div class="column">
-                        <img src="" alt="Gif 4" height="150px">
-                        <img src="">
-                        <img src="">
-                        <img src="">
-                        <img src="">
+                        <img src="gif/western/acsticlr.gif" alt="Gif 4" height="150px">
+                        <img src="gif/western/WESTERNBUT.gif">
+                        <img src="gif/western/ani-westernspur.gif">
+                        <img src="gif/western/indianani2.gif">
+                        <img src="gif/western/cowboy_rubbing_horse_md_clr.gif">
                     </div>
                     
                     
                 </div>
                 <p></p>
-                <img src="gif/western/western.gif" height="150px" width="200px"style="display: block; margin: 0 auto;">
+                <img src="gif/western/Cowboy_on_computer.gif" height="300px" width="400px"style="display: block; margin: 0 auto;">
+                <img src="Project2/sillly.png" width="300" style="display: block; margin: 0 auto;">
             </div>
         </div>
         <div class="status-bar">
@@ -108,29 +142,30 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <img class="modal-image" src="" alt="">
-            <p class = modal-text>Helloo</p>
+            <p class = modal-text>blah blah default text</p>
         </div>
     </div>
 
     <script>
-        // Create a new audio element
         var audio = new Audio('sound/gunshot.mp3');
 
-        // Select the button or any other element you want to detect clicks on
         var button = document.getElementById('body');
 
-        // Add an event listener to play audio on mouse down (left button click)
         button.addEventListener('mousedown', function(event) {
-            // Check if the left mouse button (button 0) is pressed
             if (event.button === 0) {
                 audio.play();
             }
         });
 
-        function redirectToPage() {
+        function redirectToUnity() {
             alert('Redirecting to full game page... Browser version might suck a bit');
             
-            window.location.href = 'https://play.unity.com/en/games/262c9044-1c50-427e-a340-6d93c3c1bdd5/no-cure-for-madness'; 
+            window.location.href = 'https://play.unity.com/en/games/c8abd5d1-a15e-446e-ae65-d259dd91da6e/no-cure-for-madness'; 
+        }
+        function redirectToGit() {
+            alert('Redirecting to Github page...');
+            
+            window.location.href = 'https://github.com/oscar22906/Project3-3DURP'; 
         }
         var title = document.querySelector('.project-title');
         title.addEventListener('animationend', function () {

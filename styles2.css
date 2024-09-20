@@ -229,11 +229,17 @@ body, html {
 }
 .text-section h3{
     font-family: 'pix';
+    color: rgb(123, 191, 255);
+}
+.text-section p{
+    color: #ffffff;
+    letter-spacing: 1px;
 }
 .column {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 200px;
     align-items: center;
 }
 .column img {
@@ -295,7 +301,7 @@ marquee {
 .modal-image {
     width: 100%;
     max-height: 600px;
-    object-fit: cover; 
+    object-fit: contain; 
 }
 .modal-text{
     font-family: 'Times New Roman', Times, serif;
@@ -314,21 +320,5 @@ marquee {
     justify-content: center;
     align-items: center;
     height: 100vh;
-}
-.background-image {
-    position: relative;
-    width: 350px;
-    height: auto;
-}
-/* Image 1: Position it on the right */
-.background-image:nth-child(1) {
-    top: 200px; /* Vertically center (adjust as needed) */
-    right: 50px; /* Position it near the right edge */
-}
-
-/* Image 2: Position it on the left */
-.background-image:nth-child(2) {
-    top: 200px; /* Vertically center (same height as image 1) */
-    left: 50px; /* Position it near the left edge */
 }
 

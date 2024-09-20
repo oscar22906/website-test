@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="styles.css">
     <title>Project 1: No Cure For Madness - Portfolio</title>
     <style>
+        .highlight {
+            background-color: rgb(222, 233, 112);
+            color: rgb(255, 0, 242);
+        }
     </style>
 </head>
 <body id="body">
@@ -50,6 +54,9 @@
                         <h2>O v e r v i e w</h2>
                         <p>No Cure For Madness was the name i decided to give to this short game set in a western environment. I used this idea for my first three games, the first, a console text game that was very primitive. The second, this game, a 2D walking simulator and the final game; a 3D isometric game. </p>
                         <h2>A b o u t _ T h i s _ P r o j e c t</h2>
+                        <b>Development Time:</b> <b class="highlight">6 Weeks</b>
+                        <p>Due Date: <b class="highlight">3rd Nov 2023</b></p>
+                        <p>Final score: <b class="highlight">90/100</b></p>
                         <img style="display:block; margin: 0 auto;" src="gif/western/anitumbleweed.gif" height="25">
                         <h3>What Happened?</h3>
                         <p>"In the past weeks, I have been developing my 2D RPG game, No Cure For Madness. I researched other games, design techniques, and learned the basics of Unity. This includes coding in C# within Unity, working with assets, prefabs, components, and game objects. Initially, I experimented with a top-down 2D game but later transitioned to a side-view game for simplicity."</p>
@@ -63,7 +70,8 @@
                         <h3>Conclusion</h3>
                         <p>"In conclusion, I think my game is very incomplete but what there currently is in the game is moderately polished. The player controller and animations are probably the main highlight and took the most amount of time as I had to figure a lot of it out myself, but apart from that I think I should have implemented more features instead of focusing on the few as it sacrificed the most important game features like shooting and combat, as well as other enemies."</p>
                         <button class="back-button"onclick="history.back()">← Back to Portfolio</button>
-                        <button class="visit-button" onclick="redirectToPage()">Visit Full Game Page</button>
+                        <button class="visit-button" onclick="redirectToUnity()">Visit Full Game Page</button>
+                        <button class="visit-button" onclick="redirectToGit()">Visit Github Page</button>
                         <P></P>
                         <img height="60" style="display:block; margin: 0 auto;" src="gif/western/usa1.gif">
                         <P></P>
@@ -129,10 +137,15 @@
             }
         });
 
-        function redirectToPage() {
+        function redirectToUnity() {
             alert('Redirecting to full game page... Browser version might suck a bit');
             
             window.location.href = 'https://play.unity.com/en/games/262c9044-1c50-427e-a340-6d93c3c1bdd5/no-cure-for-madness'; 
+        }
+        function redirectToGit() {
+            alert('Redirecting to Github page...');
+            
+            window.location.href = 'https://github.com/oscar22906/Project2-2DURP'; 
         }
         var title = document.querySelector('.project-title');
         title.addEventListener('animationend', function () {

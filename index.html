@@ -3,270 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="indexstyle.css">
     <title>My Epic Portfolio</title>
     <style>
-        .column {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .column img {
-            width: auto;
-            margin-bottom: 200px;
-        }
-        .content {
-            background-image: url('stars1.png'); /* Path to your custom image */
-            background-repeat: repeat; /* Ensures the image tiles */
-            background-size: 5000; /* Adjust size if needed, auto maintains original size */
-            background-position: top left; /* Position of the image (default is top left) */
-            background-attachment: fixed; /* Optional: makes the background fixed */
-            flex-grow: 1;
-            background-color: #ffff99;
-            border: inset 2px #808080;
-            padding: 10px;
-            margin-top: 10px;
-            overflow-y: auto;
-            display: flex;
-            flex-direction: column;
-            height: auto;
-        }
-        .title-bar {
-            background: linear-gradient(90deg, #000080, #1084d0);
-            padding: 3px 2px 3px 3px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .title-bar-text {
-            font-weight: bold;
-            color: white;
-            letter-spacing: 0.5px;
-            margin-left: 3px;
-        }
-        .window-body {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            padding: 8px;
-            overflow: hidden;
-        }
-        h1, h2, h3 {
-            color: #ffe100;
-        }
-        .project {
-            margin-bottom: 20px;
-            border: 1px solid #808080;
-            padding: 10px;
-        }
-        .project-content {
-            display: flex;
-            justify-content: space-between; 
-            align-items: center;
-        }
-        .project-content img {
-            max-width: 500px; 
-            height: auto;
-            margin-left: auto;
-            border: 2px solid #808080;
-            box-shadow: inset 1px 1px #dfdfdf, inset -1px -1px #404040; 
-            padding: 5px;
-            background-color: #c0c0c0;
-        }
-        .status-bar {
-            background-color: #c0c0c0;
-            border-top: 1px solid #808080;
-            padding: 2px 5px;
-            font-size: 12px;
-                }
-        .button {
-            background-color: green;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            border: none;
-            cursor: pointer;
-            text-decoration: none;
-        }
-        .button:hover {
-            background-color: darkgreen;
-        }
-        .project-title {
-            font-family: 'crang';
-            color: #ff0000;
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 30px;
-            text-shadow: 5px 5px #000000;
-        }
-        button, .button, .back-button, .visit-button {
-            background-color: #c0c0c0;
-            border: 2px solid #dfdfdf;
-            border-right-color: #404040;
-            border-bottom-color: #404040;
-            padding: 2px 6px;
-            font-size: 12px;
-            cursor: pointer;
-            transition: all 0.2s ease-in-out;
-        }
-        button:hover, .button:hover, .back-button:hover, .visit-button:hover {
-            background-color: #000080;
-            color: white;
-            border: 2px solid #ffffff;
-            box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
-        }
-        div {
-            opacity: 0; 
-            animation: fadeIn 1s ease-in forwards;  
-        }
-        @keyframes fadeIn {
-            to {
-                opacity: 1; 
-            }
-        }
-        h1 {
-            border-right: 2px solid; 
-            white-space: nowrap;  
-            width: 0;  
-            animation: typewriter 4s steps(30, end) forwards, blink 0.75s step-end infinite;
-        }
-        @keyframes typewriter {
-            from { width: 0; }
-            to { width: 100%; }  
-        }
-
-        @keyframes blink {
-            from, to { border-color: transparent; }
-            50% { border-color: black; }
-        }
-        body, html {
-            cursor: url("1200px-Colt_-export.png"), auto;
-            font-family: 'Comic Sans MS', 'MS Sans Serif', Arial, sans-serif;
-            background-color: #008080;
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden;
-        }
-        .window {
-            width: 95vw;
-            height: 95vh;
-            margin: 2.5vh auto;
-            background-color: #c0c0c0;
-            border: 2px solid #dfdfdf;
-            border-right-color: #404040;
-            border-bottom-color: #404040;
-            box-shadow: inset 1px 1px #dfdfdf, 1px 0 #000, 0 1px #000, 1px 1px #000;
-            display: flex;
-            flex-direction: column;
-        }
-        .title-bar {
-            background: linear-gradient(90deg, #000080, #1084d0);
-            padding: 3px 2px 3px 3px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .title-bar-text {
-            font-weight: bold;
-            color: white;
-            letter-spacing: 0.5px;
-            margin-left: 3px;
-        }
-        .menu-bar {
-            background-color: #c0c0c0;
-            padding: 1px;
-            border-bottom: 1px solid #808080;
-        }
-        .menu-bar ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-        .menu-bar li {
-            padding: 2px 5px;
-            margin-right: 5px;
-            cursor: pointer;
-            color: #000080;  
-            background-color: #c0c0c0;  
-            border: 1px solid transparent; 
-        }
-        .menu-bar li:hover {
-            background-color: #000080;  
-            color: white; 
-            border: 1px solid #ffffff;  
-            box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;  /* 3D effect */
-        }
-        .title-bar-controls {
-            display: flex;
-        }
-        .title-bar-controls button {
-            width: 16px;
-            height: 14px;
-            border: 1px solid white;
-            background-color: #c0c0c0;
-            margin-left: 2px;
-            font-size: 9px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 0;
-        }
-        .window-body {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            padding: 8px;
-            overflow: hidden;
-        }
-        .back-button, .visit-button {
-            background-color: #00ff00;
-            border: 2px outset #dfdfdf;
-            padding: 2px 6px;
-            font-size: 12px;
-            cursor: pointer;
-            color: #000080;
-            font-weight: bold;
-            text-shadow: 1px 1px #ffffff;
-        }
-        .back-button:hover, .visit-button:hover {
-            background-color: #ffff00;
-        }
-        .project-content {
-            display: grid;
-            grid-template-columns: 0.75fr 2.5fr 0.75fr;
-            gap: 20px; 
-        }
-        .text-section {
-            font-family: 'Times New Roman', Times, serif;
-            font-size: large;
-            grid-column: 2;
-            background-color: #0000005e;
-            border: 4px dashed #ffd000;
-            padding: 20px;
-        }
-        .text-section h2 {
-            font-family: 'DW', Times, serif;
-            color: #00ffd5cb;
-            border-bottom: 1px solid #808080;
-            padding-bottom: 5px;
-        }
-        .text-section h3{
-            font-family: 'pix';
-        }
-        .status-bar {
-            background-color: #c0c0c0;
-            border-top: 1px solid #808080;
-            padding: 2px 5px;
-            font-size: 12px;
-        }
-        marquee {
-            background-color: #000080;
-            color: #ffffff;
-            padding: 10px 15px; 
-            line-height: 1px;
-        }
     </style>
 </head>
 <body>
@@ -289,50 +28,71 @@
                 </ul>
             </div>
             <div class="content">
-                <h1>Welcome to My Portfolio!!!</h1>
-                <marquee></marquee>
-                <h2>My Projects</h2>
-                <div class="text-section">
-                    <h3>Project 1: 2D Game</h3>
-                    <div class="project-content">
-                        <div>
-                            <img class="img" src="cooltext466311714957874.gif">
-                            <h4>No Cure For Madness</h4>
-                            <p>A very short 1 level demo, featuring a pre-rendered character.</p>
-                        </div>
-                        <img src="Project1/GameScreenshot.png" alt="Screenshot from No Cure For Madness" class="thumbnail"/>
-                    </div>
-                    <a href="Project1.html" >
-                    <button class="button">See Project</button>
-                </a>
+                <div class="header">
+                    Welcome to my EPIC websiteeee!!!
                 </div>
-                <p></p>
-                <div class="text-section">
-                    <h3>Project 2: 3D Game</h3>
-                    <div class="project-content">
-                        <div>
-                            <h4>No Cure For Madness</h4>
-                            <p>A very short 1 level demo, featuring a pre-rendered character.</p>
-                        </div>
-                        <img src="NoCure1.png" alt="Screenshot from No Cure For Madness" class="thumbnail"/>
+                <p> </p>
+                <marquee>woo yeah welcome</marquee>
+                <div class="main-content">
+                    <div class="side-box">
+                        <img width="100" src="gif/kitten2.gif" alt="Animated GIF 1">
+                        <img  width="100" src="gif/pumps-ezgif.com-resize.gif" alt="Animated GIF 2">
                     </div>
-                    <a href="Project1.html" >
-                    <button class="button">See Project</button>
-                </a>
-                </div>
-                <p></p>
-                <div class="text-section">
-                    <h3>Project 1: 2D Game</h3>
-                    <div class="project-content">
-                        <div>
-                            <h4>No Cure For Madness</h4>
-                            <p>A very short 1 level demo, featuring a pre-rendered character.</p>
+                    <div class="center-box">
+                        <div class="about-section">
+                            <h2>About Me</h2>
+                            <p>whaddup im oscar and this... is my website. </p>
+                            <p align="right">ps the page is under construction still</p>
+                            <img style="display: block; margin: 0 auto;" width="50" src="index/image_2024-09-20_020322725-removebg-preview.png">
                         </div>
-                        <img src="NoCure1.png" alt="Screenshot from No Cure For Madness" class="thumbnail"/>
+                        <h2>My Projects</h2>
+                        <div class="text-section">
+                            <h3>Project 1: 2D Game</h3>
+                            <div class="project-content">
+                                <div>
+                                    <img src="cooltext466311714957874.gif" alt="Project 1 Title">
+                                    <h4>No Cure For Madness</h4>
+                                    <p>A very short 1 level demo, featuring a pre-rendered character.</p>
+                                </div>
+                                <img src="Project1/GameScreenshot.png" alt="Screenshot from No Cure For Madness" class="thumbnail"/>
+                            </div>
+                            <a href="Project1.html">
+                                <button class="button">See Project</button>
+                            </a>
+                        </div>
+                        <p></p>
+                        <div class="text-section">
+                            <h3>Project 2: 3D Game</h3>
+                            <div class="project-content">
+                                <div>
+                                    <h4>No Cure For Madness 2</h4>
+                                    <p>Another short 1 level demo, this time with a locked isometric view and animated AI characters.</p>
+                                </div>
+                                <img src="Project2/Screenshot 2024-09-20 021730.png" alt="Screenshot from No Cure For Madness" class="thumbnail"/>
+                            </div>
+                            <a href="Project2.html">
+                                <button class="button">See Project</button>
+                            </a>
+                        </div>
+                        <p></p>
+                        <div class="text-section">
+                            <h3>Project 3: Back to 2D (but better)</h3>
+                            <div class="project-content">
+                                <div>
+                                    <h4>Eavespell</h4>
+                                    <p>A synth voiced 2D adventure through a haunted attic. With your trusty tutor and close friend: Bjan the skeleton, defeat the possess items and clear the curse.</p>
+                                </div>
+                                <img src="Project 3/eavespell.png" alt="Screenshot from Eavespell" class="thumbnail"/>
+                            </div>
+                            <a href="Project3.html">
+                                <button class="button">See Project</button>
+                            </a>
+                        </div>
                     </div>
-                    <a href="Project1.html" >
-                    <button class="button">See Project</button>
-                </a>
+                    <div class="side-box">
+                        <img width="200" src="gif/Eavespell Gifs/lou2.gif" alt="Animated GIF 3">
+                        <img src="gif/green6s.gif" alt="Animated GIF 4">
+                    </div>
                 </div>
             </div>
             <div class="status-bar">
