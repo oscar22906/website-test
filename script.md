@@ -19,7 +19,7 @@ I dont really have any idea what my dream job would be because i havent done any
  theres also the option of trying to join an online indie team but this will likely not pay anything
  ## slide 6
  slide number 6... portoflio
- I have been putting together a website to display the projects that I have done so far, this will show any employer what i have done and what they can expect from me. It can also host my cv.
+ I have been putting together a website to display the projects that I have done so far, this will show any employer what i have done and what they can expect from me. Visit www.freak.money NOW
  ## slide 7
  And finally the next game. my idea is for it to be a narrative driven simulation puzzle game. you play as an alien in a derelict spacecraft with radio equipment as your only connection to other life. This concept would allow me to focus on design, audio and narrative while being very technically simple.
  ## I am oscar taylor thank you for listening to me
