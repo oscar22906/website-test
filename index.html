@@ -1,124 +1,272 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="indexstyle.css">
-    <title>Portfolio</title>
-    <style>
-    </style>
-</head>
-<body>
-    <div class="window">
-        <div class="title-bar">
-            <div class="title-bar-text">Fun Explorer :]</div>
-            <div class="title-bar-controls">
-                <button>_</button>
-                <button>□</button>
-                <button>☺</button>
-            </div>
-        </div>
-        <div class="window-body">
-            <div class="menu-bar">
-                <ul>
-                    <li>File</li>
-                    <li>Edit</li>
-                    <li>View</li>
-                    <li>Help</li>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>Oscar Taylor | Portfolio</title>
+        <link rel="icon" type="image/png" href=" " hreflang="en-uk">
+        <meta property="og:title" content="Oscar Taylor | Portfolio"/>
+        <meta property="og:description" content="Student Game Developer "/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://freak.money/"/>
+        <meta property="og:site_name" content="Oscar Taylor"/>
+        <meta property="og:image" content="web site image"/>
+        <meta property="og:image:width" content="1280"/>
+        <meta property="og:image:height" content="800"/>
+        <meta property="og:image:type" content="image/png"/>
+        <meta property="og:locale" content="en_UK">
+        <meta name="description" content="Student Game Developer ">
+        <meta name="keywords" content="gamedev, oscar taylor, oscar, @microwavehellye, freak.money, freak">
+        <meta name="google-site-verification" content="bhunSZ66edPpZvxFgHI6o8sIuHTnACHkwzfOfYP2rMI"/>
+        <meta itemprop="name" content="Oscar Taylor | Portfolio">
+        <meta itemprop="description" content="Student Game Developer ">
+        <meta itemprop="image" content="web site image">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:url" content="https://freak.money/">
+        <meta name="twitter:site" content="@microwavehellye">
+        <meta name="twitter:creator" content="@microwavehellye">
+        <meta name="twitter:title" content="Oscar Taylor | Portfolio">
+        <meta name="twitter:description" content="Student Game Developer ">
+        <meta name="twitter:image:src" content="web site image">
+        <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="css/main.css" hreflang="en-us">
+    </head>
+    <body>
+        <div id="site">
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home">Home</a></li>
+                    <li class="nav__item"><a href="#skills">Skills</a></li>
+                    <li class="nav__item"><a href="#projects">Projects</a></li>
+                    <li class="nav__item"><a href="#contact">Contact</a></li>
+                    <li class="nav__item"><a href="gallery.html">Gallery</a></li>
+                    <li class="nav__item"><a href="old_index.html">Old Website</a></li>
                 </ul>
-            </div>
-            <div class="content">
-                <div class="header">
-                    welcome to my EPIC websiteeee!!!
+            </nav>
+            <div class="switch-wrapper">
+                <div class="sun"></div>
+                <div class="toggle-wrapper">
+                    <input id="switch" type="checkbox"/>
+                    <label for="switch" id="toggle">Toggle</label>
                 </div>
-                <p> </p>
-                <marquee>woo yeah welcome to the website.   scrolling text. weeeeeeee</marquee>
-                <div class="main-content">
-                    <div class="side-box">
-                        <img width="100" src="gif/arg-standclownjugl-trans.gif" alt="Animated GIF 1">
-                        <img  width="100" src="gif/15.gif" alt="Animated GIF 2">
-                        <img  width="100" src="gif/arg-mouth-unopt.gif" alt="Animated GIF 3">
+                <div class="moon"></div>
+                <span></span>
+            </div>
+            <header class="intro" id="home">
+                <h1 class="intro__hello">
+                    Hey! <span class="emoji wave-hand animated"></span>
+                </h1>
+                <h2 class="intro__tagline">
+                    I'm <span class="name">Oscar Taylor</span>
+                    , a student in Game Development with a passion for all aspects of the creative process, including art, design, storytelling, and audio. I thrive on bringing ideas to life.
+                </h2>
+                <h3 class="intro__contact">
+                    <span>Get in touch </span>
+                    <span class="emoji pointer"></span>
+                    <span>
+                        <a href="mailto:oscar22906@gmail.com" target="_blank" class="highlight-link">oscar22906@gmail.com</a>
+                    </span>
+                </h3>
+            </header>
+            <section class="section background">
+                <div class="section__title">Background</div>
+                <div class="section__content">
+                    <p>
+                        I'm currently a student at <a class="underline-link" href="https://www.upstatement.com/" target="_blank">Lewes College</a>
+                        in my second year studying <strong>Games Development</strong> under a UAL Extended Diploma in Creative Media Production.
+                    </p>
+                    <p>As a game development student, I enjoy bridging the gap between technical development and creative design—combining my programming expertise with my artistic vision to craft immersive and engaging experiences. My goal is to create games that are not only efficient and well-optimized under the hood but also visually stunning and emotionally captivating for players.</p>
+                </div>
+            </section>
+            <section class="section skills" id="skills">
+                <div class="section__title">Skills</div>
+                <div class="section__content">
+                    <div class="skillz">
+                        <div class="skillz__category">
+                            <div class="skillz__category__label">Languages</div>
+                            <ul>
+                                <li class="skillz__category__item">C#</li>
+                                <li class="skillz__category__item">HTML</li>
+                                <li class="skillz__category__item">CSS/Sass</li>
+                                <li class="skillz__category__item">Python</li>
+                                <li class="skillz__category__item">Bash</li>
+                                <li class="skillz__category__item">Shell</li>
+                            </ul>
+                        </div>
+                        <div class="skillz__category">
+                            <div class="skillz__category__label">Engines</div>
+                            <ul>
+                                <li class="skillz__category__item">Unity</li>
+                                <li class="skillz__category__item">Unreal (4/5)</li>
+                                <li class="skillz__category__item"></li>
+                            </ul>
+                        </div>
+                        <div class="skillz__category">
+                            <div class="skillz__category__label">Tools</div>
+                            <ul>
+                                <li class="skillz__category__item">VS & VSCode</li>
+                                <li class="skillz__category__item">Bash</li>
+                                <li class="skillz__category__item">Git & Github</li>
+                                <li class="skillz__category__item">Plastic SCM</li>
+                            </ul>
+                        </div>
+                        <div class="skillz__category">
+                            <div class="skillz__category__label">Design</div>
+                            <ul>
+                                <li class="skillz__category__item">Blender</li>
+                                <li class="skillz__category__item">Unity</li>
+                                <li class="skillz__category__item">Adobe Suite</li>
+                                <li class="skillz__category__item">Krita</li>
+                                <li class="skillz__category__item">ZBrush</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="center-box">
-                        <div class="about-section">
-                            <h2 style="text-decoration: double;">About Me</h2>
-                            <p>whaddup im oscar this... is my website. this is a picture of me  </p>
-                            <p align="right">the page is under construction still</p>
-                            <img style="display: block; margin: 0 auto;" width="150" src="index/clowngrad2-min.png">
-                        </div>
-                        <h2 style="text-align: center; scale: 1.5;">Showreel</h2>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/JIHqsXBit8w?si=GUL5l9Lmvksf0xhd" style="display:block; margin: 0 auto;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        <h2>My Projects</h2>
-                        <div class="text-section">
-                            <h3>Y1 FMP: 3D Survival Game</h3>
-                            <div class="project-content">
-                                <div>
-                                    <h4>Boreal</h4>
-                                    <p>A small survival game demo with an interaction system, animated wildlife and high quality nature assets. The only thing you really have to survive however is a large bear that will attack you.</p>
+                </div>
+            </section>
+            <section class="section experience">
+                <div class="section__title">Experience</div>
+                <div class="section__content">
+                    <div class="jobs">
+                        <div class="job">
+                            <div class="time-place">
+                                <div class="job__company">
+                                    <a href="https://www.pureprint.com" target="_blank">PurePrint Group LTD</a>
                                 </div>
-                                <img src="Project 4/thumbnail.png" alt="Screenshot from Boreal" class="thumbnail"/>
+                                <div class="job__time">July 2023</div>
                             </div>
-                            <a href="Project4.html">
-                                <button class="button">See Project</button>
-                            </a>
+                            <div class="job__position">Work Experience</div>
                         </div>
-                        <div class="text-section">
-                            <h3>Project 3: Back to 2D (but better)</h3>
-                            <div class="project-content">
-                                <div>
-                                    <h4>Eavespell</h4>
-                                    <p>A synth voiced 2D adventure through a haunted attic. With your trusty tutor and close friend: Bjan the skeleton, defeat the possess items and clear the curse.</p>
+                        <div class="job">
+                            <div class="time-place">
+                                <div class="job__company">
+                                    <a href="https://unity.com" target="_blank">Unity Technologies Brighton</a>
                                 </div>
+                                <div class="job__time">June 2024</div>
+                            </div>
+                            <div class="job__position">Work Experience</div>
+                        </div>
+                    </div>
+                    <a href="OscarTaylor_CV.pdf" target="_blank" class="arrow-link">View My Resume</a>
+                </div>
+            </section>
+            <section class="section featured-projects" id="projects">
+                <div class="section__title">Featured Projects</div>
+                <div class="section__content">
+                    <div class="project">
+                        <figure class="project__pic">
+                            <a href="Project4.html" target="_blank">
+                                <img src="Project 4/thumbnail.png" alt="Screenshot from Boreal" class="thumbnail">
+                            </a>
+                        </figure>
+                        <figcaption class="project__caption">
+                            <div class="project__name">
+                                <a href="Project4.html" target="_blank">Boreal</a>
+                            </div>
+                            <p>A small survival game demo with an interaction system, animated wildlife and high quality nature assets. The only thing you really have to survive however is a large bear that will attack you.</p>
+                        </figcaption>
+                    </div>
+                    <div class="project">
+                        <figure class="project__pic">
+                            <a href="Project3.html" target="_blank">
                                 <img src="Project 3/eavespell.png" alt="Screenshot from Eavespell" class="thumbnail"/>
-                            </div>
-                            <a href="Project3.html">
-                                <button class="button">See Project</button>
                             </a>
-                        </div>
-                        <p></p>
-                        <div class="text-section">
-                            <h3>Project 2: 3D Game</h3>
-                            <div class="project-content">
-                                <div>
-                                    <h4>No Cure For Madness 2</h4>
-                                    <p>Another short 1 level demo, this time with a locked isometric view and animated AI characters.</p>
-                                </div>
-                                <img src="Project2/Screenshot 2024-09-20 021730.png" alt="Screenshot from No Cure For Madness" class="thumbnail"/>
+                        </figure>
+                        <figcaption class="project__caption">
+                            <div class="project__name">
+                                <a href="Project3.html" target="_blank">Eavespell</a>
                             </div>
-                            <a href="Project2.html">
-                                <button class="button">See Project</button>
-                            </a>
-                        </div>
-                        <p></p>
-                        <div class="text-section">
-                            <h3>Project 1: 2D Game</h3>
-                            <div class="project-content">
-                                <div>
-                                    <img src="cooltext466311714957874.gif" alt="Project 1 Title">
-                                    <h4>No Cure For Madness</h4>
-                                    <p>A very short 1 level demo, featuring a pre-rendered character.</p>
-                                </div>
-                                <img src="Project1/GameScreenshot.png" alt="Screenshot from No Cure For Madness" class="thumbnail"/>
-                            </div>
-                            <a href="Project1.html">
-                                <button class="button">See Project</button>
-                            </a>
-                        </div>
-                        <p></p>
-                        <img style="display: block; margin: 0 auto;" width="500" src="gif/image104.gif">
-                        <p></p>
+                            <p>A synth voiced 2D adventure through a haunted attic. With your trusty tutor and close friend: Bjan the skeleton, defeat the possess items and clear the curse.</p>
+                        </figcaption>
                     </div>
-                    <div class="side-box">
-                        <img width="200" src="gif/arg-uclownjuggl-bright-tr.gif" alt="Animated GIF 3">
-                        <img src="gif/bluline-gohome-dk.gif" alt="Animated GIF 4">
-                        <img  width="100" src="gif/arg-mouth-flip-unopt.gif" alt="Animated GIF 5">
+                    <div class="project">
+                        <figure class="project__pic">
+                            <a href="Project2.html" target="_blank">
+                                <img src="Project2/Screenshot 2024-09-20 021730.png" alt="Screenshot from No Cure For Madness" class="thumbnail"/>
+                            </a>
+                        </figure>
+                        <figcaption class="project__caption">
+                            <div class="project__name">
+                                <a href="Project2.html" target="_blank">No Cure For Madness 2</a>
+                            </div>
+                            <p>Another short 1 level demo, this time with a locked isometric view and animated AI characters.</p>
+                        </figcaption>
+                    </div>
+                    <div class="project">
+                        <figure class="project__pic">
+                            <a href="Project1.html" target="_blank">
+                                <img src="Project1/GameScreenshot.png" alt="Screenshot from No Cure For Madness" class="thumbnail"/>
+                            </a>
+                        </figure>
+                        <figcaption class="project__caption">
+                            <div class="project__name">
+                                <a href="Project1.html" target="_blank">No Cure For Madness</a>
+                            </div>
+                            <p>A very short 1 level demo, featuring a pre-rendered character.</p>
+                        </figcaption>
                     </div>
                 </div>
-            </div>
-            <div class="status-bar">
-                4 Projects Found
-            </div>
+            </section>
+            <section class="section other-projects">
+                <div class="section__title">Other Projects</div>
+                <div class="section__content">
+                    <div class="project">
+                        <div class="project__name">
+                            <a href="https://youtu.be/JIHqsXBit8w?si=lLHvFCCm9QFWj_Vr" target="_blank" class="arrow-link">Showreel</a>
+                        </div>
+                        <p>Short demo video showcasing a few projects.</p>
+                        <div class="project__used">
+                            <span class="project__used__item">Blender</span>
+                            <span class="project__used__item">Davinci Resolve</span>
+                            <span class="project__used__item">Motion Tracking</span>
+                            <span class="project__used__item">Video Editing</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer class="footer" id="contact">
+                <div class="footer__copyright">
+                    <div class="top">
+                        <span>Designed &amp; Developed by</span>
+                    </div>
+                    <div class="bottom">
+                        <span>Oscar Taylor</span>
+                        <img class="emoji" src="img/emojis/rockon.png" alt="emoji">
+                        <span>2024</span>
+                    </div>
+                    <div>
+                        Inspired by bchiang7
+                    </div>
+                </div>
+                <div class="footer__links">
+                    <a href="mailto:oscar22906@gmail.com" target="_blank" title="email">
+                        <span class="text">email</span>
+                        <img src="img\social\email.svg" alt="email">
+                    </a>
+                    <a href="https://twitter.com/microwavehellye" target="_blank" title="twitter">
+                        <span class="text">twitter</span>
+                        <img src="img/social/twitter.svg" alt="twitter">
+                    </a>
+                    <a href="https://instagram.com/justoscarsface" target="_blank" title="instagram">
+                        <span class="text">instagram</span>
+                        <img src="img/social/instagram.svg" alt="instagram">
+                    </a>
+                    <a href="https://github.com/oscar22906" target="_blank" title="github">
+                        <span class="text">github</span>
+                        <img src="img/social/github.svg" alt="github">
+                    </a>
+                    <a href="https://www.linkedin.com/in/oscar-taylor-252b32139" target="_blank" title="linkedin">
+                        <span class="text">linkedin</span>
+                        <img src="img/social/linkedin.svg" alt="linkedin">
+                    </a>
+                </div>
+            </footer>
+            <button id="top-button">
+                <img src="img/emojis/pointing-up.png" alt="">
+            </button>
         </div>
-    </div>
-</body>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' type="text/javascript" charset="utf-8"></script>
+        <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+        <script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+    </body>
 </html>
