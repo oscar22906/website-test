@@ -1,3 +1,19 @@
+@keyframes rainbowGlow {
+    0% { text-shadow: 0 0 10px red, 0 0 20px orange, 0 0 30px yellow, 0 0 40px green, 0 0 50px blue, 0 0 60px indigo, 0 0 70px violet; }
+    20% { text-shadow: 0 0 10px orange, 0 0 20px yellow, 0 0 30px green, 0 0 40px blue, 0 0 50px indigo, 0 0 60px violet, 0 0 70px red; }
+    40% { text-shadow: 0 0 10px yellow, 0 0 20px green, 0 0 30px blue, 0 0 40px indigo, 0 0 50px violet, 0 0 60px red, 0 0 70px orange; }
+    60% { text-shadow: 0 0 10px green, 0 0 20px blue, 0 0 30px indigo, 0 0 40px violet, 0 0 50px red, 0 0 60px orange, 0 0 70px yellow; }
+    80% { text-shadow: 0 0 10px blue, 0 0 20px indigo, 0 0 30px violet, 0 0 40px red, 0 0 50px orange, 0 0 60px yellow, 0 0 70px green; }
+    100% { text-shadow: 0 0 10px indigo, 0 0 20px violet, 0 0 30px red, 0 0 40px orange, 0 0 50px yellow, 0 0 60px green, 0 0 70px blue; }
+}
+
+.rainbow-glow {
+    text-align: center;
+    animation: rainbowGlow 2s infinite;
+}
+
+
+
 @font-face {
     font-family: Apercu;
     src: url(../fonts/apercu/Apercu-Light.eot);
@@ -1410,4 +1426,25 @@ body.night .intro {
 }
 .html.sr.night {
     background-color: #171c28;
+}
+.weasel-container {
+    position: fixed; /* Make the container fixed to the bottom */
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Center it horizontally */
+    width: 500px; /* Width of the weasel image */
+    height: 500px; /* Height to contain the movement */
+    overflow: hidden;
+    pointer-events: none; /* Prevent the container from interfering with mouse interactions */
+}
+
+.weasel {
+    position: absolute;
+    bottom: -100%; /* Start fully hidden below the container */
+    width: 100%;
+    height: auto;
+    transition: bottom 0.5s ease; /* Smooth rise/fall effect */
+}
+html {
+    scroll-behavior: smooth;
 }

@@ -75,3 +75,28 @@ $(function() {
   sr.reveal('.featured-projects', { viewFactor: 0.1 });
   sr.reveal('.other-projects', { viewFactor: 0.05 });
 });
+let isAtBottom = false;
+
+window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY; // Current scroll position from the top
+    const windowHeight = window.innerHeight; // Height of the visible area
+    const documentHeight = document.body.offsetHeight; // Total height of the document
+
+    // Check if the user is fully scrolled to the bottom
+    isAtBottom = scrollTop + windowHeight >= documentHeight - 10;
+});
+
+document.addEventListener('mousemove', (event) => {
+    const proximityThreshold = 100; // Distance from the bottom to trigger the weasel
+    const mouseY = event.clientY; // Mouse position from the top
+    const screenHeight = window.innerHeight; // Height of the viewport
+    const weasel = document.querySelector('.weasel');
+
+    // Show the weasel only if the user is at the bottom and near the bottom of the screen
+    if (isAtBottom && screenHeight - mouseY < proximityThreshold) {
+        weasel.style.bottom = '0'; // Raise the weasel
+    } else {
+        weasel.style.bottom = '-100%'; // Lower the weasel
+    }
+});
+
